@@ -1,0 +1,38 @@
+{
+  "name": "anthem",
+  "version": "0.0.0",
+  "description": "Simple REST API for blogging",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --harmony app.js",
+    "test": "./node_modules/.bin/mocha --harmony"
+  },
+  "engines": {
+    "node": "0.11.13"
+  },
+  "author": "Andrew Clark <acdlite@me.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^0.8.0",
+    "bluebird": "^2.3.4",
+    "co": "^3.1.0",
+    "koa": "^0.10.0",
+    "koa-bodyparser": "^1.0.1",
+    "koa-json": "^1.1.1",
+    "koa-passport": "^1.1.0",
+    "koa-qs": "^1.0.1",
+    "koa-router": "^3.4.0",
+    "koa-session": "^2.0.0",
+    "lodash": "^2.4.1",
+    "mongoose": "^3.8.16",
+    "mz": "^1.0.0",
+    "qs": "^2.2.4"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "co-mocha": "^1.0.1",
+    "mocha": "^1.21.4",
+    "mockgoose": "^1.10.7",
+    "nodemon": "^1.2.1"
+  }
+}
