@@ -15,9 +15,8 @@ function ContentSchema() {
   Schema.apply(this, arguments);
 
   this.add({
-    type: { type: String, required: true },
+    contentType: { type: String, required: true },
     content: Schema.Types.Mixed,
-    fields: [ContentField.Schema],
   });
 }
 

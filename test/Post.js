@@ -24,12 +24,12 @@ describe('Content', function() {
   };
 
   let p1 = {
-    type: 'number',
+    contentType: 'number',
     content: 1234,
   };
 
   let p2 = {
-    type: 'text',
+    contentType: 'text',
     content: 'Lorem ipsum',
   };
 

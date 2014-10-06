@@ -21,7 +21,7 @@ function UserSchema() {
 
   this.add({
     email: { type: String, required: true, index: { unique: true } },
-    password: { type: String, required: true },
+    password: { type: String, required: true, select: false },
     name: {
       first: String,
       last: String,
@@ -69,6 +69,15 @@ function UserSchema() {
         next(error);
       }
     })();
+  });
+
+  this.set('toJSON', {
+    transform: function(doc, ret, options) {
+      delete ret._id;
+      delete ret.__v;
+      delete ret.password;
+      return ret;
+    },
   });
 
   /**

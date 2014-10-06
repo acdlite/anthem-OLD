@@ -21,12 +21,12 @@ describe('Content', function() {
   let Content = mongoose.model('Content', new ContentSchema());
 
   let c1 = {
-    type: 'markdown',
+    contentType: 'markdown',
     content: '**Lorem ipsum**'
   };
 
   let c2 = {
-    type: 'number',
+    contentType: 'number',
     content: 1234,
   };
 
@@ -43,7 +43,7 @@ describe('Content', function() {
     expect(content2.content).to.equal(1234);
   });
 
-  it('should require content.type to exist', function *() {
+  it('should require content.contentType to exist', function *() {
     let error;
     try { yield Content.create(c3); } catch (e) { error = e; }
 
